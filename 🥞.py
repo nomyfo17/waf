@@ -55,11 +55,11 @@ while True:
             time.sleep(3)
         
         if loc.__contains__("name"):
-            filename = imput("name file -  ")
+            filename = input("name file -  ")
             listname = []
             while True:
                 uname = input("writing file -  ")
-                if uname == "run":
+                if uname.__contains__("run"):
                     break
                 else:
                     listname.append(uname)
