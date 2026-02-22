@@ -33,5 +33,5 @@ while True:
             time.sleep(5)
             print("</>  " + "clear = clear past commands")
             time.sleep(5)
-            print("</>  " + "search = command vocab")
+            print("</>  " + "option = command vocab")
             time.sleep(5)
