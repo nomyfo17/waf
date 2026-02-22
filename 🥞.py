@@ -49,7 +49,7 @@ while True:
             time.sleep(3)
             print("</>  " + "clear = clear past commands")
             time.sleep(3)
-            print("</>  " + "search = command vocab")
+            print("</>  " + "option = command vocab")
             time.sleep(3)
             print("</>  " + "name = file a new file")
             time.sleep(3)
