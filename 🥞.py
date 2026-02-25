@@ -14,6 +14,9 @@ while True:
         if cmnd == "run":
             print("</> (🥞) -1/2-")
             break
+        elif cmnd.__contains__("name"):
+            loc.append(cmnd)
+            break
         elif cmnd == "clear":
             print(".  ")
             time.sleep(0.5)
@@ -31,7 +34,7 @@ while True:
             break
         else:
             loc.append(cmnd)
-    print("</> (🥞) -2/2-")
+    print("</> (🥞) -  ")
     for cmnd in loc:
         if loc.__contains__("txt"):
             print("</>  " + cmnd)
@@ -49,25 +52,27 @@ while True:
             time.sleep(3)
             print("</>  " + "clear = clear past commands")
             time.sleep(3)
-            print("</>  " + "option = command vocab")
+            print("</>  " + "search = command vocab")
             time.sleep(3)
             print("</>  " + "name = file a new file")
             time.sleep(3)
+            print("</>  " + "save = save a file must be under name")
+            time.sleep(3)
         
         if loc.__contains__("name"):
-            filename = input("name file -  ")
-            listname = []
-            while True:
-                uname = input("writing file -  ")
-                if uname.__contains__("run"):
-                    break
-                else:
-                    listname.append(uname)
-                uname = input("writing file -  ") 
-            listname = []
-            if loc == "name wof":
-                with open(filename + '.waf', 'w') as file:
-                    file.write(listname)
-            else:
-                with open(filename + '.py', 'w') as file:
-                    file.write(listname)
+            print("code or txt")
+    time.sleep(0.2)
+    fullcode = []
+    while True:
+        time.sleep(0.5)
+        code = input(" -  ")
+        if code == "save":
+            break
+        else:
+            fullcode.append(code)
+    time.sleep(0.2)
+    filename = input("file name -  ")
+    with open(filename, "a") as file:
+        for item in fullcode:
+            file.write(str(item) + "\n")
+    print("file sussecfullly saved!")
